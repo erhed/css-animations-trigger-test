@@ -1,0 +1,184 @@
+:root {
+    --blue1: rgb(79, 79, 151);
+    --blue2: rgb(95, 95, 184);
+    --blue3: rgb(108, 108, 211);
+    --yellow1: rgb(204, 204, 0);
+    --yellow2: rgb(231, 231, 0);
+    --yellow3: rgb(255, 255, 59);
+    --red1: rgb(180, 0, 60);
+    --red2: rgb(207, 5, 72);
+    --red3: rgb(226, 25, 92);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: none;
+    /* border: 1px solid white; */
+}
+
+body {
+    overflow: hidden;
+}
+
+#divtoshow, #divtoshow2, #divtoshow3 {
+    position: absolute;
+    display: block;
+    color: white;
+    border-radius: 50%;
+    /* animation: cursorCircles 3s linear;
+    animation-iteration-count: infinite; */
+    transform: scale(1);
+}
+
+#divtoshow {
+    transition: top 0s linear, left 0s linear, background-color 0.5s;;
+    background-color: var(--yellow1);
+    width: 40px;
+    height: 40px;
+/*     animation-delay: 0s;
+ */}
+
+#divtoshow2 {
+    transition: top 0.2s linear, left 0.2s linear, background-color 1s;
+    background-color: var(--yellow2);
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.05s;
+ }
+
+#divtoshow3 {
+    transition: top 0.45s linear, left 0.45s linear, background-color 1.5s;
+    background-color: var(--yellow3);
+    width: 120px;
+    height: 120px;
+    animation-delay: 0.1s;
+ }
+
+#onme {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(28, 38, 46);
+}
+
+.wrapper {
+    position: absolute;
+    background-color: rgb(28, 38, 46);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#testBox1, #testBox2, #testBox3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#testBox1 {
+    background-color: rgb(98, 98, 187);
+}
+
+#testBox2 {
+    background-color: rgb(240, 240, 18);
+}
+
+#testBox3 {
+    background-color: rgb(214, 3, 73);
+}
+
+.testBoxHover1 {
+    animation: testBoxAnimation1 0.6s;
+    transform: scale(1);
+}
+
+.testBoxHover2 {
+    animation: testBoxAnimation2 0.6s;
+    transform: scale(1);
+}
+
+.testBoxHover3 {
+    animation: testBoxAnimation3 0.6s;
+    transform: scale(1);
+}
+
+@keyframes testBoxAnimation1 {
+    0% {
+/*         box-shadow: 0px 200px 0px  rgb(113, 163, 255);
+ */        transform: scale(1.6);
+    }
+    100% {
+/*         box-shadow: 0px 0px 0px  rgb(113, 163, 255);
+ */        transform: scale(1);
+    }
+}
+
+@keyframes testBoxAnimation2 {
+    0% {
+/*         box-shadow: 0px 200px 0px  yellow;
+ */        transform: scale(1.6);
+    }
+    100% {
+/*         box-shadow: 0px 0px 0px  yellow;
+ */        transform: scale(1);
+    }
+}
+
+@keyframes testBoxAnimation3 {
+    0% {
+/*         box-shadow: 0px 200px 0px rgb(255, 81, 0);
+ */        transform: scale(1.6);
+    }
+    100% {
+/*         box-shadow: 0px 0px 0px rgb(255, 81, 0);
+ */        transform: scale(1);
+    }
+}
+
+@keyframes cursorCircles {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* plllooopp */
+/* @keyframes testBoxAnimation {
+    0% {
+        transform: scale(2);
+    }
+    80% {
+        transform: scale(0.5);
+    }
+    96% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+} */
+
+.bong-animation {
+    transform: scale(1);
+    animation: bongAnimation 0.6s;
+}
+
+@keyframes bongAnimation {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
